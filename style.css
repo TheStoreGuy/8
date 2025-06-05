@@ -1,0 +1,205 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light grey text for readability */
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+header {
+    background-color: #1A1A1A; /* Slightly lighter than body for depth */
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 3px solid #9B59B6; /* Purple accent */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    color: #9B59B6; /* Purple accent */
+    font-weight: 600;
+    font-size: 2.8em;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Added for a more "gamer" feel */
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 20px auto; /* Added top/bottom margin */
+}
+
+section {
+    background-color: #1E1E1E; /* Card background */
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border-left: 4px solid #9B59B6; /* Purple accent on sections */
+}
+
+section h2 {
+    color: #BB86FC; /* Lighter purple for section headers */
+    font-weight: 600;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333; /* Subtle separator */
+}
+
+p {
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: #B0B0B0; /* Slightly dimmer text for paragraphs */
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    background-color: #252525;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border-left: 3px solid #BB86FC;
+    font-weight: 400;
+}
+
+a {
+    color: #BB86FC; /* Lighter purple for links */
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: #CF9FFF; /* Even lighter purple on hover/focus */
+    text-decoration: underline;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #9B59B6;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(155,89,182,0.3);
+}
+
+.cta-button:hover, .cta-button:focus {
+    background-color: #8E44AD; /* Darker shade of purple on hover */
+    color: #FFFFFF;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* Styles for the new quick links section */
+#quick-links .button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.link-button {
+    display: block; /* Changed from inline-block to fill grid cell */
+    background-color: #9B59B6;
+    color: #FFFFFF;
+    padding: 12px 20px; /* Adjusted padding */
+    border-radius: 5px;
+    text-align: center; /* Center text in button */
+    text-decoration: none;
+    font-weight: 500; /* Slightly less bold than cta */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(155, 89, 182, 0.3);
+}
+
+.link-button:hover, .link-button:focus {
+    background-color: #8E44AD;
+    color: #FFFFFF;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: #1A1A1A;
+    color: #777;
+    text-align: center;
+    padding: 25px 0;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    main {
+        padding: 20px 15px;
+    }
+    section h2 {
+        font-size: 1.6em;
+    }
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+    #quick-links .button-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust for smaller screens */
+        gap: 10px;
+    }
+    .link-button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+    section h2 {
+        font-size: 1.4em;
+    }
+}
+
+#music-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #9B59B6;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+#music-toggle:hover, #music-toggle:focus {
+    background-color: #8E44AD;
+    transform: scale(1.1);
+}
